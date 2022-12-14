@@ -9,9 +9,7 @@ import './styles/weather.scss';
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     // we will register it after the page complete the load
-    navigator.serviceWorker.register('/service-worker.js')
-    .then((reg) => console.log('SW Register: Success | Message: ', reg.scope))
-    .catch((err) => console.log('SW Register: Failed | Message: ', err));
+    navigator.serviceWorker.register("/service-worker.js");
   });
 }
 
