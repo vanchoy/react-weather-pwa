@@ -1,0 +1,27 @@
+{
+    "short_name": "React PWA Weather Tool",
+    "name": "React PWA Weather Tool",
+    "description": "Weather Tool",
+    "version": "1",
+    "version_name": "1.0 release",
+    "icons": [
+        {
+            "src": "/images/logo.png",
+            "type": "image/png",
+            "sizes": "1024x1024",
+            "purpose": "any"
+        },
+        {
+            "src": "/images/logo.png",
+            "type": "image/png",
+            "sizes": "1024x1024",
+            "purpose": "maskable"
+          }
+    ],
+    "id": "/",
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#ffa500",
+    "background_color": "#ffffff",
+    "orientation": "any"
+}

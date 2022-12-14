@@ -1,0 +1,52 @@
+  /******* START OF BUTTONS *******/
+  .btn-rec-s1,
+  a.btn-rec-s1,
+  .btn-rec-s1[type=input],
+  .btn-rec-s1[type=file],
+  .btn-rec-s1[type=button], 
+  .btn-rec-s1[type=reset],
+  .btn-rec-s1[type=submit] { 
+    margin: var(--btn-rec-s1-margin) !important;
+    padding: var(--btn-rec-s1-padding) !important;
+    width: var(--btn-rec-s1-width) !important;
+    max-width: var(--btn-rec-s1-max-width) !important;
+    height: var(--btn-rec-s1-height) !important;
+    background: var(--btn-rec-s1-bg) !important;
+    color: var(--btn-rec-s1-text-color) !important;
+    font-family: var(--btn-rec-s1-font-family) !important;
+    font-size: var(--btn-rec-s1-font-size) !important;
+    text-align: var(--btn-rec-s1-text-align) !important;
+    text-shadow: var(--btn-rec-s1-text-shadow) !important;
+    text-decoration: none !important;
+    position: var(--btn-rec-s1-position) !important;
+    z-index: var(--btn-rec-s1-z-index) !important;
+    display: var(--btn-rec-s1-display) !important;
+    border: var(--btn-rec-s1-border) !important;
+    border-radius: var(--btn-rec-s1-border-radius) !important;
+    cursor: var(--btn-rec-s1-cursor) !important;
+    outline: none !important;
+    box-shadow: var(--btn-rec-s1-box-shadow) !important;
+    /* Prevent background color leaks out */
+    background-clip: padding-box !important;
+    box-sizing: border-box !important;
+    transition: var(--btn-rec-s1-transition) !important;
+  
+    &:hover, 
+    &[type=input]:hover,
+    &[type=file]:hover,
+    &[type=button]:hover,
+    &[type=reset]:hover,
+    &[type=submit]:hover { /*label.button-rounded:hover*/
+        background: var(--btn-rec-s1-hov-bg) !important;
+        opacity: var(--btn-rec-s1-hov-opacity) !important;
+        color: var(--btn-rec-s1-hov-text-color) !important;
+        text-shadow: var(--btn-rec-s1-hov-text-shadow) !important;
+        box-shadow: var(--btn-rec-s1-hov-box-shadow) !important;
+    }
+  }
+
+  span.fileNameText {
+    display: block !important;
+    margin: 5px auto !important;
+  }
+  /******* END OF BUTTONS *******/

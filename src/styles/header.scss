@@ -1,0 +1,459 @@
+.header {
+  /* Header box settings */
+    top: 0;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    position: fixed;
+    z-index: 99999;
+    
+  /* ----------END OF HEADER BOX SETTINGS---------- */
+
+  /* LOGO Settings */
+    .logo-container {
+      float: left;
+    }
+
+    .logo {
+      /* Logo and logo-text settings*/
+      font-size: 24px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #000;
+      padding: 10px;
+
+      /* LOGO Image settings */
+        img {
+          margin-right: 10px;
+          max-height: 50px;
+          display: inline-block;
+          vertical-align: middle; 
+        }
+      /* -------------------- */
+
+      /* Logo text centering with the image*/
+        span {
+          display: inline-block;
+          vertical-align: middle; 
+        }
+      /* -------------------- */
+    }
+
+    span.logo-text {
+      color: #000;
+    }
+  /* ----------END OF LOGO SETTINGS---------- */
+  
+  /* MENU GENERAL SETTINGS */
+
+    /* Menu Container Settings */
+      .menu {
+        float: right;
+      }
+    /* ----------END OF MENU CONTAINER SETTINGS---------- */
+
+    /* Menu <li> Settings */
+      li {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    /* ----------END OF MENU <li> SETTINGS---------- */
+      .vcenter {
+        display: inline-block;
+        vertical-align: middle; 
+        margin-right: 10px;
+      }
+    /* Menu Item Settings */
+      a.menu_item {       
+        position: relative;
+        padding: 15px;
+        text-decoration: none;
+        font-size: 20px;
+        font-family: inherit;
+        text-align: left;
+        color: #666;
+        text-shadow: 1px 1px 1px #eee;
+        display: inline-block;
+
+        /* Menu Items' Hover Settings*/
+          &:hover {
+            color: #ffa500 !important;
+            
+            &:before {
+              visibility: visible;
+              transform: scaleX(1);
+            }
+          }
+        /* -------------------- */
+
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          bottom: 0;
+          left: 0;
+          background-color: #ffa500;
+          visibility: hidden;
+          transform: scaleX(0);
+          transition: all 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) 0s;
+        }
+      }
+    /* ----------END OF MENU ITEM SETTINGS---------- */
+
+    /* Menu Items Icons Settings */
+      .icon_menu_li {
+        max-width: 20px;
+        margin-right: 9px;
+      }
+    /* ---------END OF MENU ITEMS ICONS SETTINGS----------- */
+
+    /* GENERAL DROP DOWN MENU SETTINGS */
+
+      /* Drop down Menu Container */
+        .dropdown {
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+
+          .menu_item:before {
+            content: none;
+          }
+
+          /* Last drop down in the menu */
+          &:last-of-type {
+            ul.dropdown-content {
+                right: 20px;
+                min-width: 180px;
+            }
+          }
+
+          /* Show the dropdown menu on hover */
+            &:hover {
+              ul.dropdown-content {
+                display: block;
+                position: absolute;
+              }
+            }
+          /* ---------END OF SHOW DROP DOWN MENU ON HOVER----------- */
+        }
+      /* ----------END OF DROP DOWN MENU CONTAINER---------- */
+
+      /* Drop down Menu Box Settings */
+        ul.dropdown-content {
+          margin: 0;
+          max-width: 250px;
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.13);
+          border-radius: 6px;
+          //z-index: 9999;
+
+          /* Drop down Menu <li> Settings */
+            li {
+              background: none;
+              margin-left: 0;
+              display: block;
+              border-bottom: 1px solid #f0f0f0;
+
+                &:last-child {
+                  border: 0;
+                  
+                  a {
+                    &:hover {
+                      &:before {
+                        content: none;
+                      }
+                    }
+                  }
+                }
+
+              /* Drop down Menu Items Settings */
+                a {
+                  display: block;
+                  background-image: none;
+                  margin: 0;
+                  padding: 25px;
+                  font-family: inherit;
+                  font-size: 20px;
+                  color: #5C5D5D;
+                  text-shadow: 1px 1px 1px #e2e2e2;
+                  text-decoration: none;
+
+                  &:hover {
+                    background: none;
+                    color: #ffa500;
+                    text-shadow: 1px 1px 1px #f1f1f1;
+                  }
+
+                  &:before {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    bottom: 0;
+                    left: 0;
+                    background-color: #ffa500;
+                    visibility: visible;
+                    transform: scaleX(0);
+                    transition: all 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67) 0s;
+                  }
+                }
+              /* ----------END OF DROP DOWN MENU ITEMS SETTINGS---------- */  
+            }
+          /* ----------END OF DROP DOWN MENU <li> SETTINGS---------- */
+        }
+      /* ----------END OF MENU BOX SETTINGS---------- */
+
+      /* Checkbox and burger icon on Desktop menu version*/
+
+        /* Checkbox Settings */
+          .menu-btn {
+            display: none;
+          }
+        /* ---------END OF CHECKBOX SETTINGS----------- */
+
+        /* Burger Icon Settings */
+          .navicon {
+            display: none; // Removes Burger Icon on Desktop Version
+            color: #ffa500;
+            font-size: 20px;
+            transition: 0.3s;
+            //The Burger Icon hover is set on the Burger Icon Container! Check Burger Icon Container Settings in MAX SCREEN SIZE 1280px:)
+          }
+        /* ---------END OF BURGER ICON SETTINGS----------- */
+
+      /* ---------END OF CHECKBOX AND BURGER ICON ON DESKTOP VERSION----------- */
+
+      /* DROP DOWN MENU SCROLLBAR SETTINGS */
+
+        /* Scrollbar Settings */
+          ::-webkit-scrollbar {
+            width: 9px;
+          }
+        /* ----------END OF SCROLLBAR SETTINGS---------- */
+
+        /* Scrollbar Track Settings */
+          ::-webkit-scrollbar-track {
+            background: #dbdbdb;
+            border-radius: 1px;
+          }
+        /* ----------END OF SCROLLBAR TRACK SETTINGS---------- */
+
+        /* Scrollbar Handle Settings */
+          ::-webkit-scrollbar-thumb {
+            background: #ffa500;
+            border-radius: 1px;
+
+            /* Scrollbar Handle on hover Settings */
+              &:hover {
+                background: #ffa500;
+              }
+            /* ----------END OF SCROLLBAR HANDLE ON HOVER SETTINGS---------- */
+          }
+        /* ----------END OF SCROLLBAR HANDLE SETTINGS---------- */
+
+      /* ---------- END OF DROP DOWN MENU SCROLLBAR ---------- */
+
+    /* ---------END OF GENERAL DROP DOWN MENU SETTINGS----------- */
+
+  /* ---------END OF MENU GENERAL SETTINGS----------- */
+
+  /* MOBILE HEADER SETTINGS */
+   
+    /* MAX SCREEN SIZE 1280px */
+      @media screen and (max-width: 1280px) {
+          /* MENU CONTAINER SETTINGS */
+          position: sticky !important;
+          background: #fff !important;
+
+            span.logo-text {
+              color: #000 !important;
+            }
+
+            .menu {
+              float: none;
+              display: none;
+              text-align: left;
+              max-height: 0;
+              transition: max-height .2s ease-out;
+              clear: both;
+              margin: 0 auto;
+              list-style: none;
+            }
+          /* ----------END OF MENU CONTAINER---------- */
+          
+          /* RESPONSIVE MENUBOX HEIGHT */
+            .menu-btn:checked ~ .menu {
+              display: block;
+              max-height: 60vh;
+              overflow-y: auto;
+              overscroll-behavior: contain;
+            }
+          /* ---END OF RESPONSIVE MENU HEIGHT--- */
+      
+
+        /* LOGO SETTINGS */
+          .logo {
+            float: none;
+          }
+        /* ----------END OF LOGO SETTINGS---------- */
+
+        /* MENU <li> SETTINGS*/
+          li {
+            clear: both;
+            display: block;
+          }
+        /* ----------END OF MENU <li> SETTINGS---------- */
+
+        /* MENU ITEMS SETTINGS */
+          a.menu_item {
+            padding: 20px;
+            text-align: left;
+            float: none;
+            display: block;
+            text-decoration: none;
+            color: #666;
+            font-family: inherit;
+            font-size: 20px;
+
+            /* MENU ITEMS HOVER SETTINGS */
+              &:hover {
+                color: #ffa500;
+              }
+            /* ----------END OF MENU ITEMS HOVER SETTINGS---------- */
+          }
+        /* ----------END OF MENU ITEMS SETTINGS---------- */
+
+        /* DROP DOWN MENU SETTINGS*/
+          .dropdown {
+            padding-bottom: 15px;
+
+            /* DROP DOWN MENU BOX SETTINGS */
+              &:hover {
+                //show dropdown contents by default
+                ul.dropdown-content {
+                  position: relative;
+                  display: contents;
+                  z-index: 99999;
+                }
+              }
+            /* ----------END OF DROP DOWN MENU BOX SETTINGS---------- */
+          } 
+
+          ul.dropdown-content {
+            /* DROP DOWN MENU <li> SETTINGS */
+            position: relative;
+            display: contents;
+            z-index: 99999;
+
+              li {
+                margin: 0 0 0 30px;
+                border-bottom: 1px solid #f0f0f0;
+
+                a {
+                  padding: 20px;
+                }
+                
+                &:last-child {
+                  border-bottom: 1px solid #f0f0f0;
+
+                  a {
+                    &:hover {
+                      &:before {
+                        content: "";
+                      }
+                    }
+                  }
+                }
+              }
+            /* ----------END OF DROP DOWN MENU <li> SETTINGS---------- */    
+          }
+
+          /* GENERAL BURGER ICON SETTINGS */
+
+            /* Burger Icon Container */
+              .menu-icon {
+                cursor: pointer;
+                float: right;
+                padding: 15px;
+                position: relative;
+                user-select: none;
+              }
+            /* ----------END OF BURGER ICON CONTAINER---------- */
+
+            /* Burger Icon Settings */
+              .navicon {
+                display: block;
+                position: relative;
+                color: #000;
+
+                &:hover {
+                  color: #ffa500;
+                }
+              }
+            /* ----------END OF GENERAL BURGER ICON SETTINGS---------- */
+
+          /* ----------END OF GENERAL BURGER ICON SETTINGS---------- */
+
+        /* ----------END OF DROP DOWN MENU SETTINGS---------- */
+
+      }
+    /* ----------END OF MAX SCREEN SIZE 1280px---------- */
+    
+    /* MAX SCREEN SIZE 425px */
+      @media screen and (max-width: 425px) {
+        .logo {
+          font-size: 18px;
+        }
+      }
+    /* ----------END OF MAX SCREEN SIZE 425px---------- */
+
+    /* MAX SCREEN SIZE 340px */
+      @media screen and (max-width: 253px) {
+          .logo-container {
+            display: flex;
+            justify-content: center;
+            float: none;
+            clear: both;
+            margin: 0 auto;
+            text-align: center;
+          }
+          label.menu-icon {
+            display: flex;
+            justify-content: center;
+            float: none;
+            clear: both;
+            margin: 0 auto;
+            text-align: center;
+          }
+      }
+    /* ----------END OF MAX SCREEN SIZE 340px---------- */
+  
+  /* ----------END OF MOBILE HEADER SETTINGS---------- */
+}
+
+.default-pos {
+  background-color: rgba(255,255,255,0);
+  transition-timing-function: ease-in;
+  transition: 0.3s;
+
+  span.logo-text {
+    color: #fff;
+  }
+
+  @media screen and (min-width: 1281px) {
+    .menu > li > a.menu_item {   
+      color: #fff;
+      text-shadow: none;
+    }
+  }
+}
+
+.scrolled-pos {
+  background-color: rgba(255,255,255,1);
+  box-shadow: 0 2px 4px 1px rgba(199, 199, 199, 0.3);
+  transition-timing-function: ease-in;
+  transition: 0.3s;
+}
