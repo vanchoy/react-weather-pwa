@@ -85,6 +85,8 @@ const MainPage = () => {
 
     setWeather(data);
     setQuery('');
+
+    console.log(data);
   };
 
   const search = async (e) => {
@@ -92,8 +94,6 @@ const MainPage = () => {
         fetchData();
       }
   };
-
-  console.log(weather);
 
   return (
     <>

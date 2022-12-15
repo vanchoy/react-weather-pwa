@@ -1,5 +1,5 @@
 ## Introduction
-This is React PWA Weather App
+This is a React PWA Weather Tool
 
 ### Project features
 - React functional components
@@ -8,8 +8,32 @@ This is React PWA Weather App
 - SEO Optimized
 - PWA Features
 
+### Project functionalities
+- Town based weather search and map display
+
 ## Demo
 [DEMO](https://react-weather-pwa.onrender.com)
+
+## Why is it a PWA?
+The power of PWA makes the app capable, reliable and installable. It will reach anyone, anywhere, on any devices with the same codebase. In this case, there is no need to develop the same app multiple times based on different devices and platforms.
+
+## How is it a PWA?
+
+The users have to get access and the best possible experience of the tool at any condition without leaving the user with empty or messed screen. Using the PWA features like offline version, self-updates, full responsiveness and browser compatibility will additionally benefit the users.
+
+- Progressive enhancement provides the baseline of essential content and functionality to as many users as possible, while delivering the best possible experience only to users of the most modern browsers, where this project is focused on.
+
+- Having an offline version of the app when the users don't have active internet connection. Also, this will prevent unloaded/blank pages due to bad/interrupted connection.
+
+- The tool is responsive for any device with a screen running a modern browser and optimized for people with disabilities. Providing the app with media queries helps to widen the scope of accessibility and ease-of-use on different screen devices.
+
+- The app is HTTPS secured against any third parties which try to get access to sensitive data. This makes connections between the user, app and server more secure.
+
+- Last but not the least, the web app will have an installable version accessible from the browser's tab. This will give users the possibility to install the web app locally with one click, regardless of the device and platform. It is a standalone app with a feeling of being like a native app. The installable version is available to all users with modern devices. The key element is a web manifest file, which lists all the information about the app in a JSON format. This information is used to display it as it were a native app to the platform it has been installed on.
+
+## How is it progressive?
+
+Service Workers are a great way to progressively enhance the experience of the app. They are quite powerful and enable fast loading as they can take control over network requests, modify them, serve custom responses retrieved from the cache, or synthesize responses completely. This app is serving cache first.
 
 ## Requirements
 Installed Node Version `18+` (otherwise you can't run the project) 
