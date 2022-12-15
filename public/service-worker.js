@@ -17,6 +17,7 @@ self.addEventListener('install', (event) => {
 });
 
 // Listen for 'fetch' request
+// determines what happens with data that is coming from the cache
 self.addEventListener('fetch', (event) => {
     // we want to respond with smth when we have a 'fetch' request
     event.respondWith(
@@ -37,7 +38,7 @@ self.addEventListener('fetch', (event) => {
 });
 
 // Activate the SW
-// Fires when new SW registration is acquired
+// Fires when a new SW registration is acquired
 self.addEventListener('activate', (event) => {
     // remove old cache and keep the new one only
 

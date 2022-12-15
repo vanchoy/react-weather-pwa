@@ -33,7 +33,7 @@ The users have to get access and the best possible experience of the tool at any
 
 ## How is it progressive?
 
-Service Workers are a great way to progressively enhance the experience of the app. They are quite powerful and enable fast loading as they can take control over network requests, modify them, serve custom responses retrieved from the cache, or synthesize responses completely. This app is serving cache first.
+Service Workers are a great way to progressively enhance the experience of the app. They are quite powerful and enable fast loading as they can take control over network requests, modify them, serve custom responses retrieved from the cache, or synthesize responses completely. This app is saving cache in the cache storage and it servers it to the user.
 
 ## Requirements
 Installed Node Version `18+` (otherwise you can't run the project) 
