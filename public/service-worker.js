@@ -1,4 +1,4 @@
-const CACHE_NAME = "version-1"; // important to update
+const CACHE_NAME = "version-2"; // important to update
 const urlsToCache = [ 'index.html', 'offline.html' ];
 
 const self = this; // 'this' in SW file represents the SW itself, and that's the way we call it
